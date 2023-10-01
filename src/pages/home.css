@@ -1,0 +1,8 @@
+.width_img{
+    @media (max-width: 768px) { 
+        width: 360px;
+    }
+    @media (min-width: 768px) { 
+        width: 720px;
+    }
+}

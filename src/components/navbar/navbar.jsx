@@ -10,15 +10,11 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-gray-300 w-100 px-8 md:px-auto">
+      <nav className="w-100 px-8 md:px-auto">
             <div className="md:h-16 h-24 mx-auto md:px-4 justify-between flex items-center md:flex-nowrap">
 
             <div className="text-indigo-500 md:order-1 md:mx-0">
                 <img src={logo} className="h-14 w-14 rounded-full" alt="" />
-            </div>
-
-            <div className="text-gray-600 md:w-auto md:order-2 ml-8">
-                <p><span className="text-amber-800 text-xl">Chieira</span> <br /> A Cerbeija Bianense</p>
             </div>
 
            <div class="dropdown">
