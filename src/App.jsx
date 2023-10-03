@@ -1,6 +1,9 @@
-import Home from "./pages/home";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Helmet } from "react-helmet";
+import Home from "./pages/home/home"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Helmet } from "react-helmet"
+import Chieira_Darq from "./pages/chieira darq/ch_darq"
+import Chieira_Original from "./pages/chieira original/ch_original"
+
 
 
 export default function App() {
@@ -27,6 +30,22 @@ export default function App() {
           </div>
 
         }/>
+
+        <Route path="/ch_original" element={
+          <div>
+
+            < Chieira_Original />             
+
+          </div>
+        } />
+
+        <Route path="/ch_darq" element={
+          <div>
+
+            <Chieira_Darq />
+
+          </div>
+        } />
 
       </Routes>
     </Router>

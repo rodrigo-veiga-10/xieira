@@ -1,4 +1,4 @@
-import Navbar from "../components/navbar/navbar"
+import Navbar from "../../components/navbar/navbar"
 import main_img from "./home.jpeg"
 import "./home.css"
 import { useNavigate } from "react-router-dom"
@@ -56,7 +56,7 @@ export default function Home() {
                 </div>
                 <div>
                     <p class="leading-relaxed text-base">A chieira original com o sabor mais <span className="text-slate-900">artesanal</span> e <span className="text-slate-900">tradicional</span></p>
-                    <a className=" text-red-800 no-underline cursor-pointer" onClick={() => {navigate("/sobre")}}>Saber Mais</a>
+                    <a className=" text-red-800 no-underline cursor-pointer" onClick={() => {navigate("/ch_original")}}>Saber Mais</a>
                 </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@ export default function Home() {
                     Não sei o que escrever mas não interessa porque se estás a ler isto, não te preocupes porque 
                     este texto não interessa a ninguém
                     </p>
-                    <a className=" text-red-800 no-underline cursor-pointer" onClick={() => {navigate("/sobre")}}>Saber Mais</a>
+                    <a className=" text-red-800 no-underline cursor-pointer" onClick={() => {navigate("/ch_darq")}}>Saber Mais</a>
                 </div>
                 </div>
             </div>
