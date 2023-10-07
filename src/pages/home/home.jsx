@@ -2,54 +2,13 @@ import Navbar from "../../components/navbar/navbar"
 import main_img from "./home.jpeg"
 import "./home.css"
 import { useNavigate } from "react-router-dom"
-import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
-import React, { useState, useEffect } from 'react'
 
 
 
 
 export default function Home() {
-    const navigate = useNavigate();
 
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-    const [inViana, setInViana] = useState(false);
-  
-    useEffect(() => {
-      getLocation();
-    }, []);
-  
-    const getLocation = () => {
-      const successCallback = (position) => {
-        const latitude = position.coords.latitude;
-        const longitude = position.coords.longitude;
-  
-        // Define the latitude and longitude boundaries for Viana do Castelo
-        const vianaDoCasteloBounds = {
-            north: 41.72422,
-            south: 41.671709,
-            east: -8.798136,  
-            west: -8.858734
-        };
-    
-        // Check if the user's coordinates are within the bounding box
-        const inViana = (
-            latitude >= vianaDoCasteloBounds.south && 
-            latitude <= vianaDoCasteloBounds.north &&
-            longitude >= vianaDoCasteloBounds.west &&
-            longitude <= vianaDoCasteloBounds.east
-        );
-  
-        setLoading(false);
-      };
-  
-      const errorCallback = (err) => {
-        setError(err);
-        setLoading(false);
-      };
-  
-      navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-    };
+    const navigate = useNavigate();
 
     return (
         <>
@@ -76,7 +35,7 @@ export default function Home() {
         <br />
 
         <section class="text-gray-600 body-font">
-        <div class="container px-5 pt-24 pb-5 mx-auto">
+        <div class="container px-5 py-24 mx-auto">
 
             {/* Titulo */}
             <div class="flex flex-col text-center w-full mb-8">
@@ -121,29 +80,9 @@ export default function Home() {
             </div>
         </div>
         </section>
+         
 
-        {!inViana && 
-        <div>
-            <BrowserView>
-            <div className="flex  h-12 text-3xl m-auto items-center mt-3 justify-center">
-                <div className="h-10 w-10">
-                    <img src="https://www.freeiconspng.com/uploads/info-icon-32.png" alt="" />
-                </div>
-                <span className="ml-3 mr-1 text- font-bold">Chieira</span><span className="text- mr-1">só está disponível em Viana do Castelo!</span>
-                <a className="text- font-bold underline text-black" href="https://www.google.com/maps/dir/?api=1&destination=41.6978,-8.8355">Direções</a>
-            </div>
-            </BrowserView>
-            <MobileView>
-            <div className="flex  h-12 m-auto items-center justify-center  mb-3 text-lg">
-                <div className="h-5 w-5">
-                    <img src="https://www.freeiconspng.com/uploads/info-icon-32.png" alt="" />
-                </div>
-                <span className="ml-2 mr-1 text- font-bold">Chieira</span><span className="text- mr-1">só em Viana do Castelo!</span>
-                <a className="text- font-bold underline text-black" href="https://www.google.com/maps/dir/?api=1&destination=41.6978,-8.8355">Direções</a>
-            </div>
-            </MobileView>
-        </div>
-        }
+
         </>
     )
 }
