@@ -2,6 +2,7 @@ import Navbar from "../../components/navbar/navbar"
 import main_img from "./home.jpeg"
 import "./home.css"
 import { useNavigate } from "react-router-dom"
+import {MobileView, BrowserView} from "react-device-detect"
 
 
 
@@ -81,6 +82,24 @@ export default function Home() {
         </div>
         </section>
          
+        <BrowserView>
+            <div className="flex  h-12 text-3xl m-auto items-center mt-3 justify-center">
+                <div className="h-10 w-10">
+                    <img src="https://www.freeiconspng.com/uploads/info-icon-32.png" alt="" />
+                </div>
+                <span className="ml-3 mr-1 text- font-bold">Chieira</span><span className="text- mr-1">só está disponível em Viana do Castelo!</span>
+                <a className="text- font-bold underline text-black" href="https://www.google.com/maps/dir/?api=1&destination=41.6978,-8.8355">Direções</a>
+            </div>
+            </BrowserView>
+            <MobileView>
+            <div className="flex  h-12 m-auto items-center justify-center  mb-3 text-lg">
+                <div className="h-5 w-5">
+                    <img src="https://www.freeiconspng.com/uploads/info-icon-32.png" alt="" />
+                </div>
+                <span className="ml-2 mr-1 text- font-bold">Chieira</span><span className="text- mr-1">só em Viana do Castelo!</span>
+                <a className="text- font-bold underline text-black" href="https://www.google.com/maps/dir/?api=1&destination=41.6978,-8.8355">Direções</a>
+            </div>
+            </MobileView>
 
 
         </>
