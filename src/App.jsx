@@ -49,6 +49,7 @@ export default function App() {
 
       </Routes>
     </Router>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQ6F2TXBNK"></script>
     </>
   )
 }
@@ -64,4 +65,12 @@ function isInFacebook(){
   }
 }
 
+function analytics(){
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZQ6F2TXBNK');
+}
 addEventListener("load", isInFacebook);
+addEventListener("load", analytics);
