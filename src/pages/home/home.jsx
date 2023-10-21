@@ -4,6 +4,7 @@ import "./home.css"
 import { useNavigate } from "react-router-dom"
 import {MobileView, BrowserView} from "react-device-detect"
 import info from "./info.png"
+import email from "./email.png"
 
 
 
@@ -105,6 +106,22 @@ export default function Home() {
             </div>
             </MobileView>
 
+        <div className="mt-6 flex flex-col items-center bg-gray-100 rounded-2xl w-[360px] mx-auto mb-5">
+            <p className="text-5xl text-center mt-3">Contacta-nos</p>
+            <div className="mb-8 flex justify-center items-center">
+                <div className="text-primary mr-6 flex h-[80px] w-[70px] sm:h-[70px] sm:w-[70px] items-center justify-center overflow-hidden rounded bg-opacity-5">
+                    <img src={email} alt="email" />
+                </div>
+                <div className="w-full">
+                    <h4 className="mb-1 text-xl font-bold text-dark">
+                        Email
+                    </h4>
+                    <a className="text-base text-body-color no-underline text-[#414040]" href = "mailto: ptveiga@gmail.com">
+                        ptveiga@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
 
         </>
     )
