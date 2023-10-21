@@ -50,7 +50,7 @@ export default function Home() {
             <div class="flex flex-wrap -m-4">
 
             {/* Card 1 (Chieira Original) */}
-            <div class="p-4 md:w-1/3">
+            <div class="p-4 md:w-1/3" onClick={() => {navigate("/ch_mordoma")}}>
                 <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
                 <div class="mb-3">
                     <h2 class="text-gray-900 text-3xl title-font font-medium">Mordoma</h2>
@@ -66,7 +66,7 @@ export default function Home() {
             </div>
 
             {/* Card 2 (Chieira Darq) */}
-            <div class="p-4 md:w-1/3">
+            <div class="p-4 md:w-1/3" onClick={() => {navigate("/ch_darq")}}>
                 <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
                 <div className="mb-3">
                     <h2 className="text-gray-900 text-3xl title-font font-medium">Chieira Darq</h2>

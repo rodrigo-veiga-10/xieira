@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom"
 export default function navbar_back(){
     const navigate = useNavigate();
     return(
-    <nav className="w-full h-20 flex items-center sticky top-0 bg-[#d9d9d9]">
+    <nav className="w-full h-20 flex items-center sticky top-0 bg-[#d9d9d9] shadow-sm">
 
         <img src={back} className="h-8 w-10 absolute left-2" alt="voltar atrás" onClick={() => {navigate("/")}}/>
         

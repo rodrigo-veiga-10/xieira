@@ -10,7 +10,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="w-100 px-8 md:px-auto sticky top-0 bg-[#d9d9d9]">
+      <nav className="w-100 px-8 md:px-auto sticky top-0 bg-[#d9d9d9] shadow-sm">
             <div className="md:h-16 h-24 mx-auto md:px-4 justify-between flex items-center md:flex-nowrap">
 
             <div className="text-indigo-500 md:order-1 md:mx-0">
@@ -21,6 +21,8 @@ export default function Navbar() {
                <img class="h-6 w-6 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" src={dropdown} alt="dropdown"></img>
                <ul className="dropdown-menu gray"> 
                    <p  className="dropdown-item" onClick={() => {navigate("/sobre")}}>Sobre</p>
+                   <p  className="dropdown-item" onClick={() => {navigate("/ch_mordoma")}}>Mordoma</p>
+                   <p  className="dropdown-item" onClick={() => {navigate("/ch_darq")}}>Darq</p>
                </ul>
            </div>
 
