@@ -3,6 +3,7 @@ import main_img from "./home.jpeg"
 import "./home.css"
 import { useNavigate } from "react-router-dom"
 import {MobileView, BrowserView} from "react-device-detect"
+import info from "./info.png"
 
 
 
@@ -24,7 +25,7 @@ export default function Home() {
 
         {/* Imagem principal (duas cervejas e um copo) */}
         <div className="flex justify-center mt-16">
-            <img src={main_img} className="width_img rounded-2xl" />
+            <img src={main_img} className="width_img rounded-2xl"  alt="imagem com duas cervejas e um copo"/>
         </div>
 
         {/* 
@@ -49,21 +50,23 @@ export default function Home() {
             <div class="flex flex-wrap -m-4">
 
             {/* Card 1 (Chieira Original) */}
-            <div class="p-4 md:w-1/3">
+            <div class="p-4 md:w-1/3" onClick={() => {navigate("/ch_mordoma")}}>
                 <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
                 <div class="mb-3">
-                    <h2 class="text-gray-900 text-3xl title-font font-medium">Chieira</h2>
+                    <h2 class="text-gray-900 text-3xl title-font font-medium">Mordoma</h2>
                     <span className="text-gray-900 text-lg title-font font-medium">A chieira <span className="text-red-800">original</span></span>
                 </div>
                 <div>
-                    <p class="leading-relaxed text-base">A chieira original com o sabor mais <span className="text-slate-900">artesanal</span> e <span className="text-slate-900">tradicional</span></p>
-                    <a className=" text-red-800 no-underline cursor-pointer" onClick={() => {navigate("/ch_original")}}>Saber Mais</a>
+                    <p class="leading-relaxed text-base">Cerveja com sabor e tradição, trabalhada e refinada ao longo dos anos.
+                     A combinação do conhecimento cervejeiro e os ingredientes de alta qualidade leva Mordoma a um novo patamar de sabor
+                    </p>
+                    <a className=" text-slate-700 font-medium no-underline cursor-pointer" onClick={() => {navigate("/ch_mordoma")}}>Saber mais...</a>
                 </div>
                 </div>
             </div>
 
             {/* Card 2 (Chieira Darq) */}
-            <div class="p-4 md:w-1/3">
+            <div class="p-4 md:w-1/3" onClick={() => {navigate("/ch_darq")}}>
                 <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
                 <div className="mb-3">
                     <h2 className="text-gray-900 text-3xl title-font font-medium">Chieira Darq</h2>
@@ -71,10 +74,11 @@ export default function Home() {
                 </div>
                 <div class="flex-grow">
                     <p class="leading-relaxed text-base">
-                    Não sei o que escrever mas não interessa porque se estás a ler isto, não te preocupes porque 
-                    este texto não interessa a ninguém
+                    Cerveja escura e encorpada, com tons de malte torrado.
+                     A cada gole o amargo e a doçura juntam-se para proporcionar o melhor sabor. 
+                     Brinde à riqueza, ao caráter e à paixão cervejeira com uma Stout extraordinária.
                     </p>
-                    <a className=" text-red-800 no-underline cursor-pointer" onClick={() => {navigate("/ch_darq")}}>Saber Mais</a>
+                    <a className=" text-slate-700 font-medium no-underline cursor-pointer" onClick={() => {navigate("/ch_darq")}}>Saber mais...</a>
                 </div>
                 </div>
             </div>
@@ -85,7 +89,7 @@ export default function Home() {
         <BrowserView>
             <div className="flex  h-12 text-3xl m-auto items-center mt-3 justify-center">
                 <div className="h-10 w-10">
-                    <img src="https://www.freeiconspng.com/uploads/info-icon-32.png" alt="" />
+                    <img src={info} alt="ícone de informação" />
                 </div>
                 <span className="ml-3 mr-1 text- font-bold">Chieira</span><span className="text- mr-1">só está disponível em Viana do Castelo!</span>
                 <a className="text- font-bold underline text-black" href="https://www.google.com/maps/dir/?api=1&destination=41.6978,-8.8355">Direções</a>
@@ -94,7 +98,7 @@ export default function Home() {
             <MobileView>
             <div className="flex  h-12 m-auto items-center justify-center  mb-3 text-lg">
                 <div className="h-5 w-5">
-                    <img src="https://www.freeiconspng.com/uploads/info-icon-32.png" alt="" />
+                    <img src={info} alt="ícone de informação" />
                 </div>
                 <span className="ml-2 mr-1 text- font-bold">Chieira</span><span className="text- mr-1">só em Viana do Castelo!</span>
                 <a className="text- font-bold underline text-black" href="https://www.google.com/maps/dir/?api=1&destination=41.6978,-8.8355">Direções</a>
