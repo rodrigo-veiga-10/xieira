@@ -92,8 +92,8 @@ export default function Home() {
                 <div className="h-10 w-10">
                     <img src={info} alt="ícone de informação" />
                 </div>
-                <span className="ml-3 mr-1 text- font-bold">Chieira</span><span className="text- mr-1">só está disponível em Viana do Castelo!</span>
-                <a className="text- font-bold underline text-black" href="https://www.google.com/maps/dir/?api=1&destination=41.6978,-8.8355">Direções</a>
+                <span className="ml-2 mr-1 text- font-bold">Chieira, </span>
+                <a className="text- font-bold underline text-black" href="https://www.google.com/maps/dir/?api=1&destination=41.6978,-8.8355">onde estamos</a>
             </div>
             </BrowserView>
             <MobileView>
@@ -101,8 +101,8 @@ export default function Home() {
                 <div className="h-5 w-5">
                     <img src={info} alt="ícone de informação" />
                 </div>
-                <span className="ml-2 mr-1 text- font-bold">Chieira</span><span className="text- mr-1">só em Viana do Castelo!</span>
-                <a className="text- font-bold underline text-black" href="https://www.google.com/maps/dir/?api=1&destination=41.6978,-8.8355">Direções</a>
+                <span className="ml-2 mr-1 text- font-bold">Chieira, </span>
+                <a className="text- font-bold underline text-black" href="https://www.google.com/maps/dir/?api=1&destination=41.6978,-8.8355">onde estamos</a>
             </div>
             </MobileView>
 
