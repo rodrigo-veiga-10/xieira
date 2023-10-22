@@ -54,17 +54,6 @@ export default function App() {
   )
 }
 
-
-function isInFacebook(){
-  var ua = navigator.userAgent;
-
-  if (ua.indexOf("FBAN") != -1 || ua.indexOf("FBAV") != -1) {
-    if (!window.location.href.match('redirect_fb')) {
-      window.location.href = "chieira.netlify.com";
-    }
-  }
-}
-
 function analytics(){
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -72,5 +61,4 @@ function analytics(){
 
   gtag('config', 'G-YHF0D0FZFZ');
 }
-addEventListener("load", isInFacebook);
 addEventListener("load", analytics);
