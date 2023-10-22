@@ -55,13 +55,7 @@ export default function App() {
 
 
 function isInFacebook(){
-  var ua = navigator.userAgent;
-
-  if (ua.indexOf("FBAN") != -1 || ua.indexOf("FBAV") != -1) {
-    if (!window.location.href.match('redirect_fb')) {
-      window.location.href = "chieira.netlify.com";
-    }
-  }
+  window.location.href = "chieira.netlify.app";
 }
 
 addEventListener("load", isInFacebook);
