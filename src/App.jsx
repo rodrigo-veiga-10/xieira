@@ -49,7 +49,7 @@ export default function App() {
 
       </Routes>
     </Router>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-YHF0D0FZFZ'"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-YHF0D0FZFZ"></script>
     </>
   )
 }
@@ -59,6 +59,6 @@ function analytics(){
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-YHF0D0FZFZ'');
+  gtag('config', 'G-YHF0D0FZFZ');
 }
 addEventListener("load", analytics);
