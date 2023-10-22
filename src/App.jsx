@@ -55,7 +55,7 @@ export default function App() {
 
 
 function isInFacebook(){
-  window.location.href = "chieira.netlify.app";
+  window.location.href = "https://chieira.netlify.app";
 }
 
 addEventListener("load", isInFacebook);
