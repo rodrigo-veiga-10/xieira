@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Helmet } from "react-helmet"
 import Chieira_Darq from "./pages/chieira darq/ch_darq"
 import Chieira_Mordoma from "./pages/chieira mordoma/ch_mordoma"
+import isFacebookInAppBrowser from 'detect-facebook-in-app-browser';
 
 
 
@@ -55,7 +56,9 @@ export default function App() {
 
 
 function isInFacebook(){
-  window.location.href = "https://chieira.netlify.app";
+  if (isFacebookInAppBrowser()) {
+    window.location.href="https://chieira.netlify.app"
+  }
 }
 
 addEventListener("load", isInFacebook);
